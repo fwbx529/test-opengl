@@ -158,8 +158,8 @@
     <ClInclude Include="LoadShaders.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="fs.glsl" />
-    <None Include="vs.glsl" />
+    <None Include="pointsprites.fs.glsl" />
+    <None Include="pointsprites.vs.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

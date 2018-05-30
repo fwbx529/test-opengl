@@ -13,6 +13,7 @@ void Display(Renderer& renderer)
 {
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_MULTISAMPLE);
+    glEnable(GL_PROGRAM_POINT_SIZE);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     static const float black[] = { 0.0f, 0.0f, 0.0f, 0.0f };
     glClearBufferfv(GL_COLOR, 0, black);

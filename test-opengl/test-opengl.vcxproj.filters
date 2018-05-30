@@ -34,10 +34,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="fs.glsl">
+    <None Include="pointsprites.fs.glsl">
       <Filter>源文件</Filter>
     </None>
-    <None Include="vs.glsl">
+    <None Include="pointsprites.vs.glsl">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>
