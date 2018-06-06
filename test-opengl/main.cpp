@@ -11,12 +11,15 @@ void Initialize(Renderer& renderer)
 
 void Display(Renderer& renderer)
 {
-    glEnable(GL_DEPTH_TEST);
+    glDisable(GL_DEPTH_TEST);
     glEnable(GL_MULTISAMPLE);
     glEnable(GL_PROGRAM_POINT_SIZE);
+    glEnable(GL_POINT_SPRITE);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    static const float black[] = { 0.0f, 0.0f, 0.0f, 0.0f };
-    glClearBufferfv(GL_COLOR, 0, black);
+    static const float white[] = { 1.0f, 1.0f, 1.0f, 1.0f };
+    glClearBufferfv(GL_COLOR, 0, white);
 
     renderer.SetUniforms();
     renderer.Draw();

@@ -33,7 +33,6 @@ void Renderer::Init()
         { GL_NONE, NULL }
     };
     prog = LoadShaders(shader_info);
-
     //other initialization
 }
 
@@ -43,13 +42,13 @@ void Renderer::SetData()
     vector<glm::vec3> vertex;
 
     srand((unsigned)time(NULL));
-    int count = 10;
-    vertex.resize(10);
-    for (int i = 0; i < 10; i++)
+    int count = 100;
+    vertex.resize(count);
+    for (int i = 0; i < count; i++)
     {
         vertex[i] = glm::vec3(2 * random_1() - 1,
                               2 * random_1() - 1,
-                              0.0f);
+                              random_1());
     }
 
     vertex_count = (unsigned int)vertex.size();
